@@ -1,0 +1,81 @@
+.TH man 1 "24-Aug-2021" "v12.0" "Implementation Of The Linux Shell"
+.SH NAME
+.B SSP
+-
+.BR man_1_simple_shell
+.SH SYNOPSIS
+.B ./hsh
+- [command][argurments]
+.PP
+.SH DESCRIPTION
+.PP
+This is a simplistic implementation of the Unix Shell commands. It can be executed with the <./hsh> command. ./hsh 
+is a custom-made command line interpreter that reads and executes basic commands from user input exactly as
+any standar unix-like operating systems shell program would.
+
+.PP
+.SH USAGE
+This simple shell accepts user commands from standard input. The command is passed to the shell
+when the user presses the enter key.  This simple shell is capable of performing the following actions:
+
+Tokennizes command line string into null terminated array.
+
+Searches for exact path of command if the exact path is not given by user.
+
+Executes the command passed by user.
+
+If the command or path are not found, the program returns error message.
+.PP
+.SH EXAMPLES
+.PP
+.B Interactive mode
+.PP
+username@yourregularprompt$ ls -l -a
+.PP
+.B Non-interactive moode
+.PP
+.RE
+echo ls -l -a | ./hsh
+.PP
+.SH BUILTINS
+.SB
+.IP env
+-   Prints out environmental variables to stdout.
+.SB
+.IP exit
+-   Exits ./hsh and frees any memory that was allocated during program use.
+.SB
+.IP ^C
+-   Shell will not quit when user types Ctrl + c.
+.SB
+.IP cd
+-   Changes the current directory of the process.
+.SH COMMAND EXECUTION
+After a command is read by the interpreter, it will be split into tokens. Depending on input, the  following actions will take place:
+.PP
+If the command is a builtin, the Shell will  search the PATH variable for the directory containing the command.
+.PP
+If the search is  successful,  the shell executes the command.
+.SH  ENVIRONMENT
+When a program is invoked, it is given an array of strings called the environment.
+.SH PROMPT
+The shell will display the prompt through the PS1, ready to take the next command.
+.SH BUGS
+No known bugs yet.
+.P
+.SH
+Source Code:
+.I
+https://github.com/hamicch/simple_shell
+.PP
+.SH AUTHORS:
+Hayatu Sanusi and Mwovi Kelvin
+.P
+.SH Report bugs to
+.I
+https://github.com/ngusya/simple_shell/issues
+https://github.com/hamicch/simple_shell/issues
+.PP
+.SH
+SEE ALSO
+bash(1), cd(1POSIX), echo(1), getopt(1), ls(1)
