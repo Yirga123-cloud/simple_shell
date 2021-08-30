@@ -283,12 +283,8 @@ $
 
 ## Authors :black_nib:
 
-* Alex Yu <[AlexYu01](https://github.com/AlexYu01)>
-* Brennan D Baraban <[bdbaraban](https://github.com/bdbaraban)>
-
-## License :lock:
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+* Hayatu Sanusi <[Hayatu](https://github.com/hamicch)>
+* Mwovi Kelvin <[ngusya](https://github.com/ngusya)>
 
 ## Acknowledgements :pray:
 
